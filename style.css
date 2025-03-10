@@ -4,7 +4,6 @@ body {
   background-color: #f4f4f4; /* Light grey background */
   text-align: center;
   padding: 20px;
-  overflow: hidden; /* Prevents internal scrolling */
 }
 
 /* Calculator Container */
