@@ -79,17 +79,6 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
-  <script>
-  function sendHeight() {
-      parent.postMessage({ height: document.body.scrollHeight }, "*");
-  }
-
-  // Send height on load
-  window.onload = sendHeight;
-
-  // Observe changes to dynamically update height when content changes
-  new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true });
-</script>
 </body>
 
 </html>
