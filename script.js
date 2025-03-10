@@ -473,17 +473,5 @@ let monetaryValue = dataset[index];
 }
 })}
 
-function sendHeightToParent() {
-    setTimeout(() => {
-        let height = document.documentElement.scrollHeight;
-        window.parent.postMessage({ type: "resizeIframe", height: height }, "*");
-    }, 100); // Slight delay to ensure the height updates
-}
-
-// Run when the page loads & when content updates
-window.onload = sendHeightToParent;
-window.addEventListener("resize", sendHeightToParent);
-document.addEventListener("input", sendHeightToParent);
-
 
 
