@@ -305,4 +305,11 @@ button {
   padding: 5px;
 }
 
+iframe {
+  width: 100%;
+  height: auto;
+  min-height: 600px; /* Adjust as needed */
+  border: none;
+  overflow: hidden;
+}
 
