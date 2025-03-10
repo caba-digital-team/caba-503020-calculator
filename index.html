@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1A.0">
+  <title>50-30-20 budget calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <img src='https://www.caba.org.uk/assets/img/logo/caba-logo-purple-aqua-blue.svg'></img>
+    <h2>50-30-20 budget calculator</h2>
+      <p id="warning-message" style="color: red; font-weight: bold; display: none;">Budget percentages must add up to 100%.</p>
+    <p id="unallocated-budget" style="color: red; font-weight: bold; display: none;">Unallocated Budget: £0</p>
+
+    <!-- Currency & Monthly Income in One Container -->
+    <div class="form-group row">
+      <!-- Currency Selection -->
+      <div class="column">
+        <label for="currency">currency:</label>
+        <select id="currency">
+          <option value="GBP" selected>GBP (£)</option>
+          <option value="USD">USD ($)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="AUD">AUD ($)</option>
+        </select>
+      </div>
+
+      <!-- Monthly Income Input -->
+      <div class="column">
+        <label for="income">monthly income:</label>
+        <div class="input-wrapper">
+          <span class="currency-symbol">£</span>
+          <input type="text" id="income" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget Categories -->
+    <div id="category-container">
+
+      <div class="category">
+        <span>Needs (50%)</span>
+        <input type="number" class="category-percentage" value="50" data-name="Needs" min="1" max="100">
+      </div>
+      <div class="category">
+        <span>Wants (30%)</span>
+        <input type="number" class="category-percentage" value="30" data-name="Wants">
+      </div>
+      <div class="category">
+        <span>Savings (20%)</span>
+        <input type="number" class="category-percentage" value="20" data-name="Savings">
+      </div>
+      <!-- Add Category Button -->
+      <button id="add-category-btn">+ add category</button>
+    </div>
+
+    <!-- Results Container (Budget Breakdown) -->
+    <div class="results-container">
+      <div id="results"></div>
+    </div>
+
+    <!-- Chart Container (Pie Chart Below) -->
+    <div class="chart-container">
+      <canvas id="budgetChart"></canvas>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="button-container">
+      <button id="reset-btn"><i class="fas fa-sync-alt"></i></button>
+      <button id="save-pdf-btn">Save as PDF</button>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
