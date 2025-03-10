@@ -472,3 +472,14 @@ let monetaryValue = dataset[index];
     }
 }
 })}
+
+function sendHeightToParent() {
+    let height = document.documentElement.scrollHeight; // Get full height of content
+    window.parent.postMessage({ type: "resizeIframe", height: height }, "*"); // Send height to parent page
+}
+
+// Run when the page loads & when content updates
+window.onload = sendHeightToParent;
+window.addEventListener("resize", sendHeightToParent);
+document.addEventListener("input", sendHeightToParent);
+
