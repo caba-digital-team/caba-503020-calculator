@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f4f4; /* Light grey background */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Calculator Container */
+.calculator-container {
+  background: #ffffff; /* White container */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  color: #333; /* Dark grey text */
+}
+
+@media (max-width: 768px) {
+  .calculator-container img {
+    max-width: 200px; /* Reduce max size on smaller screens */
+  }
+}
+
+
+/* Logo */
+.calculator-container img {
+  max-width: 350px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* Headers */
+h2 {
+  color: #5b1b6c; /* New deep purple accent color */
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+p {
+  color: #666; /* Medium grey text */
+}
+
+/* Input Fields */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: right;
+  background: #f9f9f9; /* Light grey input background */
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  border-color: #5b1b6c; /* Accent color on focus */
+  outline: none;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* New Row for Two Columns */
+.row {
+  display: flex;
+  gap: 15px; /* Space between columns */
+  justify-content: space-between;
+}
+
+/* New Row for Two Columns */
+.row {
+  display: flex;
+  gap: 15px; /* Space between columns */
+  justify-content: space-between;
+}
+
+/* Adjusted Column Sizes */
+.column:first-child {
+  flex: 0.3; /* Currency field takes 25% */
+}
+
+.column:last-child {
+  flex: 0.7; /* Monthly income field takes 75% */
+}
+
+@media (max-width: 768px) {
+  .column:first-child {
+    flex: 0.4; /* Give more space to currency input */
+  }
+
+  .column:last-child {
+    flex: 0.6; /* Reduce width of income field slightly */
+  }
+}
+
+
+/* Ensure inputs and selects fit inside */
+.column select,
+.column input {
+  width: 100%;
+}
+
+/* Ensure inputs and selects fit inside */
+.column select,
+.column input {
+  width: 100%;
+}
+
+/* Currency Symbol */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Ensures content does not overflow */
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #5b1b6c;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.button-container button {
+  flex: 1;
+  padding: 12px;
+}
+
+/* Reset & Save Buttons */
+#reset-btn {
+  background: #d9534f;
+  color: white;
+}
+
+#reset-btn:hover {
+  background: #c9302c;
+}
+
+#save-pdf-btn {
+  background: #5b1b6c; /* New deep purple accent color */
+  color: white;
+}
+
+#save-pdf-btn:hover {
+  background: #471353;
+}
+
+/* Add Category Button */
+#add-category-btn {
+  background: #5b1b6c; /* New deep purple accent */
+  color: white;
+  width: 100%;
+}
+
+#add-category-btn:hover {
+  background: #471353;
+}
+
+/* Category Styling */
+.category {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  background: #f9f9f9; /* Light grey background */
+  border-radius: 6px;
+  margin-bottom: 8px;
+  min-height: 45px; /* Ensures consistent row height */
+}
+
+.category span {
+  flex-grow: 1; /* Ensures labels take up available space on the left */
+  text-align: left;
+}
+
+.category input {
+  width: 55px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px; /* Adjusted for better vertical centering */
+  background: #fff; /* White input field */
+  color: #333;
+  flex-shrink: 0; /* Prevents shrinking */
+  height: 30px; /* Ensures uniform input height */
+  margin-top: -2px;
+}
+
+/* Delete Button */
+.delete-category {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #d9534f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+
+.delete-category:hover {
+  color: #c9302c;
+}
+
+/* Results Display */
+#results {
+  background: #f9f9f9; /* Light grey */
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#results h3 {
+  color: #5b1b6c; /* Accent color */
+  font-weight: 600;
+}
+
+/* Warning Messages */
+#warning-message,
+#unallocated-budget {
+  color: #d9534f;
+  font-weight: bold;
+  display: none;
+  margin-top: 10px;
+}
+
+.results-container {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px; /* Space between text and chart */
+}
+
+/* Budget Breakdown (Left Side) */
+.left-content {
+  flex: 1; /* Allows it to grow and take available space */
+}
+
+/* Make Results & Chart Appear in Separate Rows */
+.results-container {
+  display: block; /* Stack elements instead of side by side */
+  text-align: left; /* Align text properly */
+}
+
+/* Ensure Chart Container Matches Budget Breakdown Width */
+.chart-container {
+  width: 100%; /* Ensure it stays inside the bounding box */
+  max-width: 400px; /* Matches budget breakdown width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9; /* Light grey background */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto; /* Centers the chart */
+  overflow: hidden; /* Prevents overflow */
+  box-sizing: border-box; /* Ensures padding doesn’t add to width */
+}
+
+/* Ensure Canvas Stays Inside the Container */
+#budgetChart {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 350px; /* Prevents it from getting too large */
+  max-height: 350px;
+  padding: 5px;
+}
+
+
