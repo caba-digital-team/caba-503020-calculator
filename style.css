@@ -307,8 +307,7 @@ button {
 
 iframe {
   width: 100%;
-  height: auto;
-  min-height: 600px; /* Adjust as needed */
+  height: 100%;
   border: none;
   overflow: hidden;
 }
