@@ -300,7 +300,6 @@ button {
 #budgetChart {
   width: 100% !important;
   height: auto !important;
-  max-width: 350px; /* Prevents it from getting too large */
   max-height: 350px;
   padding: 5px;
 }
