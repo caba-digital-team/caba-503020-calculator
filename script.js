@@ -190,10 +190,8 @@ function updateCurrency() {
   
   // Function to add a new category above the "Add Category" button
   function addCategory() {
-    // Get the number of additional categories (excluding Needs, Wants, and Savings)
     let existingCategories = Object.keys(categories).length;
 
-    // Limit to 5 additional categories (so total allowed = 8)
     if (existingCategories >= 8) {
         alert("You can only add up to 5 extra categories.");
         return;
@@ -215,20 +213,17 @@ function updateCurrency() {
     let categoryContainer = document.getElementById("category-container");
     let addCategoryButton = document.getElementById("add-category-btn");
 
-    // Create a new category div
     let newCategoryDiv = document.createElement("div");
     newCategoryDiv.classList.add("category");
     newCategoryDiv.innerHTML = `
-        <span>${newCategoryName} (${newCategoryPercentage}%)</span>
+        <span>${newCategoryName}</span> <!-- ✅ Removed Percentage Here -->
         <input type="number" class="category-percentage" value="${newCategoryPercentage}" data-name="${newCategoryName}">
         <button class="delete-category" onclick="deleteCategory('${newCategoryName}', this)">
             <i class="fas fa-times"></i>
         </button>
     `;
 
-    // Insert the new category ABOVE the Add Category button
     categoryContainer.insertBefore(newCategoryDiv, addCategoryButton);
-
     calculateBudget();
 }
   
@@ -472,6 +467,3 @@ let monetaryValue = dataset[index];
     }
 }
 })}
-
-
-
