@@ -298,9 +298,8 @@ button {
 /* Ensure Canvas Stays Inside the Container */
 #budgetChart {
   width: 100% !important;
-  max-width: 450px;
   height: auto !important;
+  max-width: 350px; /* Prevents it from getting too large */
   max-height: 350px;
   padding: 5px;
 }
-
