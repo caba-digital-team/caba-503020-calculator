@@ -284,7 +284,6 @@ button {
 /* Ensure Chart Container Matches Budget Breakdown Width */
 .chart-container {
   width: 100%; /* Ensure it stays inside the bounding box */
-  max-width: 400px; /* Matches budget breakdown width */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,6 +298,7 @@ button {
 /* Ensure Canvas Stays Inside the Container */
 #budgetChart {
   width: 100% !important;
+  max-width: 450px;
   height: auto !important;
   max-height: 350px;
   padding: 5px;
